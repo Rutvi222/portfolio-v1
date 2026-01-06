@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 – Page Not Found | Rutvi Dhameliya</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="stylesheet" href="assets/css/common.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--home-body-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: var(--font-montserrat);
+            color: var(--home-body-text);
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .oops-text {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: -10px;
+        }
+
+        .error-code {
+            font-size: 180px;
+            font-weight: 900;
+            margin: 0;
+            line-height: 1;
+            letter-spacing: -5px;
+        }
+
+        .message-text {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.6;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 600px) {
+            .error-code {
+                font-size: 120px;
+            }
+            .oops-text, .message-text {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <p class="oops-text">Oops! Page not found</p>
+        <h1 class="error-code">404</h1>
+        <p class="message-text">
+            We are sorry, but the page you requested was not found
+        </p>
+    </div>
+
+</body>
+</html>

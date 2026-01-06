@@ -27,6 +27,6 @@ I enjoy building clean, scalable solutions and working on automation, integratio
 
 ## 🌐 Live Demo
 
-👉 [https://your-portfolio-url.netlify.app](https://rutvi-dhameliya.netlify.app/)
+👉 [https://rutvi-dhameliya.netlify.app/](https://rutvi-dhameliya.netlify.app/)
 
 

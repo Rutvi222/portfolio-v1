@@ -20,7 +20,6 @@ I enjoy building clean, scalable solutions and working on automation, integratio
 
 - Responsive and clean UI
 - SEO-friendly page structure
-- Project showcase section
 - Resume download option
 - Fast-loading and lightweight design
 

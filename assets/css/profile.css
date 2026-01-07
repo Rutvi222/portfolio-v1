@@ -1,0 +1,377 @@
+.about-body {
+    background-color: var(--about-body-color) !important;
+    color: var(--about-body-text) !important;
+    font-family: var(--font-montserrat) !important;
+}
+
+a {
+    background-color : transparent;
+    text-decoration : none;
+    color      : var(--color-1) !important;
+    transition : all 0.3s ease-in-out;
+}
+
+a:focus,
+a:hover,
+a:active {
+    color : var(--color-1-darker) !important;
+}
+
+a:hover,
+a:active {
+    outline : 0;
+}
+
+p {
+    font-size      : inherit;
+    text-rendering : optimizeLegibility;
+}
+
+.row {
+    width     : 92%;
+    max-width : var(--width-grid-max);
+    margin    : 0 auto;
+    display   : flex;
+    flex-flow : row wrap;
+}
+
+.row .row {
+    width        : auto;
+    max-width    : none;
+    margin-left  : calc(var(--gutter) * -1);
+    margin-right : calc(var(--gutter) * -1);
+}
+
+.column {
+    display : block;
+    flex    : 1 1 0%;
+    padding : 0 var(--gutter);
+}
+
+.lg-12 {
+    flex  : none;
+    width : 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .row {
+        width         : 100%;
+        padding-left  : 6vw;
+        padding-right : 6vw;
+    }
+
+    .row .row {
+        padding-left  : 0;
+        padding-right : 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .row .row {
+        margin-left  : 0;
+        margin-right : 0;
+    }
+
+    .block-stack>.column,
+    .column {
+        flex         : none;
+        width        : 100%;
+        margin-left  : 0;
+        margin-right : 0;
+        padding      : 0;
+    }
+
+    .hide-on-sm {
+        display : none;
+    }
+}
+
+h1, .h1 {
+    font-weight            : 400;
+    font-variant-ligatures : common-ligatures;
+    text-rendering         : optimizeLegibility;
+    margin-top    : var(--vspace-2_5);
+    margin-bottom : var(--vspace-0_75);
+    font-size      : var(--text-display-1);
+    line-height    : var(--vspace-2);
+    letter-spacing : -.01em;
+}
+
+@media screen and (max-width: 500px) {
+    h1, .h1 {
+        font-size   : var(--text-xxxl);
+        line-height : calc(1.625 * var(--space));
+    }
+}
+
+
+h1, h2, h3, h4, h5, h6, 
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight            : 400;
+    font-variant-ligatures : common-ligatures;
+    text-rendering         : optimizeLegibility;
+}
+
+h1, .h1 {
+    margin-top    : var(--vspace-2_5);
+    margin-bottom : var(--vspace-0_75);
+}
+
+h2, .h2, h3, .h3, h4, .h4 {
+    margin-top    : var(--vspace-2);
+    margin-bottom : var(--vspace-0_5);
+}
+
+h5, .h5, h6, .h6 {
+    margin-top    : var(--vspace-1_5);
+    margin-bottom : var(--vspace-0_5);
+}
+
+h1, .h1 {
+    font-size      : var(--text-display-1);
+    line-height    : var(--vspace-2);
+    letter-spacing : -.01em;
+}
+
+@media screen and (max-width: 500px) {
+    h1, .h1 {
+        font-size   : var(--text-xxxl);
+        line-height : calc(1.625 * var(--space));
+    }
+}
+h2, .h2 {
+    font-size   : var(--text-xxl);
+    line-height : var(--vspace-1_5);
+}
+
+h3, .h3 {
+    font-size   : var(--text-xl);
+    line-height : var(--vspace-1_25);
+}
+
+h4, .h4 {
+    font-size   : var(--text-lg);
+    line-height : var(--vspace-1);
+}
+
+h5, .h5 {
+    font-size   : var(--text-md);
+    line-height : var(--vspace-0_875);
+}
+
+h6, .h6 {
+    font-family    : var(--font-montserrat);
+    font-weight    : 600;
+    font-size      : var(--text-sm);
+    line-height    : var(--vspace-0_75);
+    text-transform : uppercase;
+    letter-spacing : .2rem;
+}
+
+strong,
+b {
+    font-weight : 600;
+}
+
+hr {
+    border       : solid var(--color-border);
+    border-width : .1rem 0 0;
+    clear        : both;
+    margin       : var(--vspace-2) 0 calc(var(--vspace-2) - 1px);
+    height       : 0;
+}
+
+ul {
+    list-style : disc;
+}
+
+li {
+    display : list-item;
+}
+
+ol,
+ul {
+    margin-left : 1.6rem;
+}
+
+ul li {
+    padding-left : .4rem;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    margin : 1.6rem 0 1.6rem 1.6rem;
+}
+
+ul.disc li {
+    display    : list-item;
+    list-style : none;
+    padding    : 0 0 0 .8rem;
+    position   : relative;
+}
+
+ul.disc li::before {
+    content        : "";
+    display        : inline-block;
+    width          : 8px;
+    height         : 8px;
+    border-radius  : 50%;
+    background     : var(--color-1);
+    position       : absolute;
+    left           : -.9em;
+    top            : 11px;
+    vertical-align : middle;
+}
+
+.profile-heading {
+    font-family: var(--font-AnticDidone);
+    color: var(--color-2-darker) !important;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## theme-specific typography classes
+ * ------------------------------------------------------------------- */
+.text-pretitle {
+    font-size      : var(--text-xxl);
+    font-weight    : 400;
+    margin-top     : 0;
+    margin-left    : .2rem;
+    margin-bottom  : var(--vspace-0_5);
+    position       : relative;
+}
+
+
+/* --------------------------------------------------------------------
+ * ## about timelines
+ * -------------------------------------------------------------------- */
+ .about-timelines {
+    --timeline-left-padding : var(--vspace-1_75);
+    --timeline-top-adjust   : var(--vspace-0_5);
+    padding-top             : var(--vspace-3);
+    flex-direction: column;
+    gap: var(--vspace-2);
+}
+
+.about-timelines .text-pretitle {
+    margin-left : var(--timeline-left-padding);
+}
+
+.timeline {
+    margin-top    : var(--vspace-1_25);
+    padding-right : 1vw;
+    position      : relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--vspace2);
+}
+
+.timeline::before {
+    content          : "";
+    display          : block;
+    width            : 1px;
+    height           : calc(100% - var(--timeline-top-adjust));
+    background-color : var(--color-border);
+    position         : absolute;
+    top              : var(--timeline-top-adjust);
+    left             : 3px;
+}
+
+.timeline__block {
+    padding-left   : var(--timeline-left-padding);
+    padding-bottom : var(--vspace-0_5);
+    position       : relative;
+}
+
+.timeline__block:last-child {
+    padding-bottom : 0;
+}
+
+.timeline__bullet {
+    display          : block;
+    height           : 8px;
+    width            : 8px;
+    border-radius    : 50%;
+    background-color : var(--color-1);
+    position         : absolute;
+    top              : var(--timeline-top-adjust);
+    left             : 0;
+}
+
+.timeline__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space);
+}
+
+.timeline__title {
+    font-weight   : 500;
+    font-size     : var(--text-size);
+    margin-top    : 0;
+    margin-bottom : var(--vspace-0_125);
+}
+
+.timeline__meta {
+    font-weight   : 300;
+    font-size     : var(--text-size);
+    margin-top    : 0;
+    margin-bottom : var(--vspace-0_125);
+}
+
+.timeline__timeframe {
+    font-size      : var(--text-sm);
+    line-height    : var(--vspace-0_75);
+    text-transform : uppercase;
+    letter-spacing : .2em;
+    color          : var(--color-text-timeline);
+    margin-top     : -.2rem;
+}
+
+.timeline__desc p {
+    margin-bottom: var(--base-font-size);
+    font-size: var(--base-font-size);
+    line-height: 1.6;
+}
+
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * about
+ * ------------------------------------------------------------------- */
+
+
+ @media screen and (max-width: 1000px) {
+    .about-timelines {
+        --timeline-left-padding : var(--vspace-1_25);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .about-timelines {
+        --timeline-left-padding : var(--vspace-1_5);
+    }
+
+    .about-timelines .column+.column {
+        margin-top : var(--vspace-1_5);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .about-timelines {
+        --timeline-left-padding : var(--vspace-1);
+    }
+}
+
+.intro-text {
+    font-size: var(--base-font-size);
+    line-height: var(--vspace-1_25);
+}
+
+.tech-stack {
+    font-size: var(--base-font-size);
+    font-style: italic;
+    padding-top: var(--vspace-0_5);
+    text-decoration: underline;
+}

@@ -1,0 +1,226 @@
+.about-body {
+    background-color: var(--about-body-color) !important;
+    color: var(--color-2-darker) !important;
+    font-family: var(--font-montserrat) !important;
+}
+
+html {
+    cursor: none;
+    scroll-behavior: smooth;
+}
+  
+  
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 5rem;
+    height: 5rem;
+    z-index: 200;
+    pointer-events: none;
+}
+.cursor div {
+    position: absolute;
+    display: grid;
+    place-items: center;
+}
+.cursor div div {
+    border: 1px solid var(--about-body-text);
+    border-radius: 50%;
+    animation: pulse 2.5s linear infinite;
+    box-shadow: 0 0 50px 5px var(--about-body-text);
+}
+.cursor div:nth-child(1),
+.cursor div:nth-child(2) {
+    width: 100%;
+    height: 100%;
+}
+.cursor div:nth-child(1) {
+    transition: transform 0.2s ease-out;
+}
+.cursor div:nth-child(2) {
+    transition: transform 0.1s ease-out;
+}
+.cursor div:nth-child(2) div {
+    background: var(--about-body-text);
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+}
+
+.s-content {
+    margin-bottom: var(--vspace-0_75);
+}
+
+a {
+    background-color : transparent;
+    text-decoration : none;
+    color      : var(--color-1);
+    transition : all 0.3s ease-in-out;
+}
+
+a:focus,
+a:hover,
+a:active {
+    color : var(--color-1-darker);
+}
+
+a:hover,
+a:active {
+    outline : 0;
+}
+
+p {
+    font-size      : inherit;
+    text-rendering : optimizeLegibility;
+}
+
+.heading {
+    color: var(--color-2-darker) !important;
+    font-family: var(--font-AnticDidone) !important;
+}
+
+.row {
+    width     : 92%;
+    max-width : var(--width-grid-max);
+    margin    : 0 auto;
+    display   : flex;
+    flex-flow : row wrap;
+}
+
+.row .row {
+    width        : auto;
+    max-width    : none;
+    margin-left  : calc(var(--gutter) * -1);
+    margin-right : calc(var(--gutter) * -1);
+}
+
+.column {
+    display : block;
+    flex    : 1 1 0%;
+    padding : 0 var(--gutter);
+}
+
+.lg-12 {
+    flex  : none;
+    width : 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .row {
+        width         : 100%;
+        padding-left  : 6vw;
+        padding-right : 6vw;
+    }
+
+    .row .row {
+        padding-left  : 0;
+        padding-right : 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .row .row {
+        margin-left  : 0;
+        margin-right : 0;
+    }
+
+    .block-stack>.column,
+    .column {
+        flex         : none;
+        width        : 100%;
+        margin-left  : 0;
+        margin-right : 0;
+        padding      : 0;
+    }
+
+    .hide-on-sm {
+        display : none;
+    }
+}
+
+h1, .h1 {
+    font-weight            : 400;
+    font-variant-ligatures : common-ligatures;
+    text-rendering         : optimizeLegibility;
+    margin-top    : var(--vspace-2_5);
+    margin-bottom : var(--vspace-0_75);
+    font-size      : var(--text-display-1);
+    line-height    : var(--vspace-2);
+    letter-spacing : -.01em;
+}
+
+@media screen and (max-width: 500px) {
+    h1, .h1 {
+        font-size   : var(--text-xxxl);
+        line-height : calc(1.625 * var(--space));
+    }
+}
+
+/* ===================================================================
+ * # BLOG-LIST
+ *
+ *
+ * ------------------------------------------------------------------- */
+
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.blog-list a {
+    color: var(--about-body-text) !important;
+}
+
+.blog-list a:hover {
+    color: var(--color-1) !important;
+}
+
+.blog-item {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    max-width: 80%;
+    transition: opacity 0.3s ease;
+    color: var(--color-2-dark) !important;
+}
+
+.blog-item:hover {
+    opacity: 0.7;
+}
+
+.blog-meta {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+.blog-title {
+    font-size: clamp(12px, 3vw, 24px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.excerpt {
+    font-size: var(--text-size);
+    font-weight: 300;
+    color: var(--color-2);
+}
+
+.tags {
+    font-size: var(--text-sm);
+    color: var(--color-2-darker) !important;
+    margin-top: var(--base-font-size);
+    font-style: italic;
+}
+
+@media screen and (max-width: 800px) {
+    .s-content {
+        padding-left: var(--vspace-1_5);
+    }
+}

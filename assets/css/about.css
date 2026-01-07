@@ -1,0 +1,301 @@
+.about-body {
+    background-color: var(--about-body-color) !important;
+    color: var(--about-body-text) !important;
+    font-family: var(--font-montserrat) !important;
+}
+
+h1 {
+    font-size : 2em;
+    margin    : 0.67em 0;
+}
+
+hr {
+    box-sizing : content-box;
+    height     : 0;
+    overflow   : visible;
+}
+
+a {
+    background-color : transparent;
+}
+
+p {
+    font-size      : inherit;
+    text-rendering : optimizeLegibility;
+}
+
+a {
+    text-decoration : none;
+}
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+    margin  : 0;
+    padding : 0;
+}
+
+.row {
+    width     : 92%;
+    max-width : var(--width-grid-max);
+    margin    : 0 auto;
+    display   : flex;
+    flex-flow : row wrap;
+}
+
+.row .row {
+    width        : auto;
+    max-width    : none;
+    margin-left  : calc(var(--gutter) * -1);
+    margin-right : calc(var(--gutter) * -1);
+}
+
+.column {
+    display : block;
+    flex    : 1 1 0%;
+    padding : 0 var(--gutter);
+}
+
+.lg-12 {
+    flex  : none;
+    width : 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .row {
+        width         : 100%;
+        padding-left  : 6vw;
+        padding-right : 6vw;
+    }
+
+    .row .row {
+        padding-left  : 0;
+        padding-right : 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .row .row {
+        margin-left  : 0;
+        margin-right : 0;
+    }
+
+    .block-stack>.column,
+    .column {
+        flex         : none;
+        width        : 100%;
+        margin-left  : 0;
+        margin-right : 0;
+        padding      : 0;
+    }
+
+    .hide-on-sm {
+        display : none;
+    }
+}
+
+a {
+    color      : var(--color-1) !important;
+    transition : all 0.3s ease-in-out;
+}
+
+a:focus,
+a:hover,
+a:active {
+    color : var(--color-1-darker) !important;
+}
+
+a:hover,
+a:active {
+    outline : 0;
+}
+
+h1, 
+.h1 {
+    font-weight            : 400;
+    color                  : var(--color-text-dark);
+    font-variant-ligatures : common-ligatures;
+    text-rendering         : optimizeLegibility;
+}
+
+h1, .h1 {
+    margin-top    : var(--vspace-2_5);
+    margin-bottom : var(--vspace-0_75);
+}
+
+h1, .h1 {
+    font-size      : var(--text-display-1);
+    line-height    : var(--vspace-2);
+    letter-spacing : -.01em;
+}
+
+@media screen and (max-width: 500px) {
+    h1, .h1 {
+        font-size   : var(--text-xxxl);
+        line-height : calc(1.625 * var(--space));
+    }
+}
+
+hr {
+    border       : solid var(--color-border);
+    border-width : .1rem 0 0;
+    clear        : both;
+    margin       : var(--vspace-2) 0 calc(var(--vspace-2) - 1px);
+    height       : 0;
+}
+
+hr.fancy {
+    border     : none;
+    margin     : var(--vspace-2) 0;
+    height     : var(--vspace-1);
+    text-align : center;
+}
+
+hr.fancy::before {
+    content        : "*****";
+    letter-spacing : .3em;
+}
+
+.lead,
+.attention-getter {
+    font-weight : 300;
+    font-size   : var(--text-size);
+    line-height : var(--vspace-1);
+    color       : var(--color-text-dark);
+}
+
+.prelogue-head {
+    color: var(--color-2-darker) !important;
+}
+
+/* ===================================================================
+ * # PROJECT-WIDE SHARED STYLES
+ *
+ *
+ * ------------------------------------------------------------------- */
+
+.wide {
+    max-width : var(--width-wide);
+}
+
+.wider {
+    max-width : var(--width-wider);
+}
+
+.narrow {
+    max-width : var(--width-narrow);
+}
+
+[data-animate-el] {
+    opacity : 0;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## theme-specific typography classes
+ * ------------------------------------------------------------------- */
+.text-pretitle {
+    font-family    : var(--font-montserrat);
+    font-size      : var(--text-sm);
+    font-weight    : 400;
+    color          : var(--color-white);
+    text-transform : uppercase;
+    letter-spacing : .3em;
+    margin-top     : 0;
+    margin-left    : .2rem;
+    margin-bottom  : var(--vspace-0_5);
+    position       : relative;
+}
+
+.text-pretitle.with-line {
+    color        : var(--color-1) !important;
+    padding-left : 6rem;
+    transform    : translateX(-6rem);
+}
+
+.text-pretitle.with-line::before {
+    content          : "";
+    display          : block;
+    height           : 1px;
+    width            : 4rem;
+    background-color : rgba(255, 255, 255, 0.5);
+    position         : absolute;
+    top              : 50%;
+    left             : 0;
+}
+
+.text-huge-title {
+    --text-huge : 10.8rem;
+    font-size   : var(--text-huge);
+    line-height : 1.0740;
+    margin-top  : 0;
+}
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * project-wide shared styles
+ * ------------------------------------------------------------------- */
+@media screen and (max-width: 800px) {
+    .text-pretitle.with-line {
+        padding-left : 3rem;
+        transform    : translateX(-3rem);
+        transform    : none;
+    }
+
+    .text-pretitle.with-line::before {
+        width : 2rem;
+    }
+}
+
+
+/* ===================================================================
+ * # ABOUT
+ *
+ *
+ * ------------------------------------------------------------------- */
+
+.s-about {
+    padding-bottom : var(--vspace-3);
+}
+
+/* --------------------------------------------------------------------
+ * ## about info
+ * -------------------------------------------------------------------- */
+.about-info {
+    --gutter    : 0;
+    width       : 100%;
+    align-items : center;
+}
+
+.about-info__text .text-pretitle {
+    margin-bottom : var(--vspace-1);
+}
+.info-text {
+    margin-bottom: var(--vspace-1);
+}
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * about
+ * ------------------------------------------------------------------- */
+@media screen and (max-width: 1300px) {
+    .about-info__text {
+        padding : var(--vspace-2) 8rem var(--vspace-1_5) 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .about-info {
+        --gutter  : 1.6rem;
+        width     : 92%;
+        max-width : 800px;
+    }
+
+    .about-info__text {
+        padding     : var(--vspace-1) 0 0 0;
+        margin-left : 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about-info {
+        width : 100%;
+    }
+}
